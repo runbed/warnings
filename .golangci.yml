@@ -1,0 +1,28 @@
+linters:
+  enable:
+    - dogsled
+    - dupl
+    - gofmt
+    - goimports
+    - gosec
+    - misspell
+    - nakedret
+    - stylecheck
+    - unconvert
+    - unparam
+    - whitespace
+    - errcheck
+    - depguard
+
+linters-settings:
+  errcheck:
+    exclude-functions:
+      - github.com/runbed/warnings.Warnf
+      - github.com/runbed/warnings.Warn
+  depguard:
+    rules:
+      main:
+        list-mode: strict
+        allow:
+          - $gostd
+          - github.com/runbed/warnings
